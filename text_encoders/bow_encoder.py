@@ -7,11 +7,11 @@ import numpy as np
 class BOWEncoder(nn.Module):
     def __init__(self, config, is_training = True):
         super(BOWEncoder, self).__init__()
-        
+        '''
         filename = config['init_emb_matrix_path']
         with open(filename, 'rb') as fp:
             word2vec = np.load(fp)
-
+        '''
         #Not using any pretrained embeddings for now:
         
         #self.embedding_weights = torch.from_numpy(word2vec)
