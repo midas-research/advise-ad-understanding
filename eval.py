@@ -98,7 +98,7 @@ def main():
             outputs = model(examples)
             loss_dict = compute_loss(outputs, train_config, is_training= False)
             
-            loss = torch.tensor(0.0)
+            loss = torch.tensor(0.0).to(device)
             for loss_name, loss_tensor in loss_dict.items():
                 loss += loss_tensor
 
